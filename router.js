@@ -21,7 +21,7 @@ router.get('*', (req, res) => {
 function createRenderer() {
   const bundlePath = resolve(__dirname, './dist/server.bundle.js');
   const template = fs.readFileSync('./index.html', 'utf-8');
-  return createBundleRenderer(bundlePath, { template });
+  return createBundleRenderer(bundlePath, { template }); // https://ssr.vuejs.org/api/#createbundlerenderer
 }
 
 module.exports = router;
